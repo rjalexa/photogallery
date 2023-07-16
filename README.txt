@@ -1,13 +1,11 @@
 
 TITLE: 
-Photo - 100% Fully Responsive Free HTML5 Bootstrap Template
+Photo - 100% Fully Responsive HTML5 Bootstrap Website
 
 AUTHOR:
-DESIGNED & DEVELOPED by GetTemplates.co
-
-Website: http://gettemplates.co/
-Twitter: http://twitter.com/gettemplatesco
-Facebook: http://facebook.com/gettemplatesco
+Based on a free template DESIGNED & DEVELOPED by GetTemplates.co
+Modified to load all image files from the images directory
+Modified so that an image clicked from the gallery gets displayed as big as possible
 
 
 CREDITS:
