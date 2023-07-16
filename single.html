@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet"> -->
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Image Viewer</title>
+	<style>
+		body,
+		#image-container,
+		#display-image {
+			background-color: black;
+		}
+
+		#image-container {
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#image-container img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="image-container">
+		<div class="aside-toggle btn-circle">
+			<a href="galleryfull.php"><span></span><em>Back</em></a>
+		</div>
+		<img src="" id="display-image" alt="Display Image">
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		// Get image path from URL
+		var urlParams = new URLSearchParams(window.location.search);
+		var imgPath = urlParams.get('img');
+		// Set the image source
+		document.getElementById('display-image').src = imgPath;
+
+		// Listen for click events and redirect to gallery
+		document.addEventListener('click', function () {
+			window.location.href = 'galleryfull.php';
+		});
+
+		// jQuery used to listen for 'esc' key press events and redirect to gallery
+		$(document).keyup(function (e) {
+			if (e.key === "Escape") { // escape key maps to keycode `27`
+				window.location.href = 'galleryfull.php';
+			}
+		});
+	</script>
+
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+
+	<!-- Magnific -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Isotope & imagesLoaded -->
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<!-- GSAP  -->
+	<script src="js/TweenLite.min.js"></script>
+	<script src="js/CSSPlugin.min.js"></script>
+	<script src="js/EasePack.min.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
