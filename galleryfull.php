@@ -100,15 +100,12 @@
               </div>
               <div class="col-md-12 fh5co-social">
                 <a href="#"><i class="icon-envelope"></i></a>
-                <a href="#"><i class="icon-twitter"></i></a>
                 <a href="#"><i class="icon-linkedin"></i></a>
-                <a href="#"><i class="icon-instagram"></i></a>
-                <a href="#"><i class="icon-google-plus"></i></a>
               </div>
               <div class="col-md-12" style="margin-top: 40px;">
-                <p>&copy; 2016 Free HTML5 Template. All Rights Reserved. Designed by <a
-                    href="http://gettemplates.co/">GetTemplates</a> Demo Images: <a href="http://unsplash.com/"
-                    target="_blank">Unsplash</a></p>
+                <p>&copy; 2023 Robert Alexander. All Rights Reserved. Derived from <a
+                    href="http://gettemplates.co/">GetTemplates</a> Images: <a href="http://midjourney.com/"
+                    target="_blank">Midjourney</a></p>
               </div>
             </div>
           </div>

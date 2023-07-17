@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transition: 0.5s;
 }
 .aside-toggle a, .back-to-home a {
-  background: #000;
+  background: #333;
   font-size: 13px;
   width: 100px;
   height: 100px;
