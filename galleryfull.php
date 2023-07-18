@@ -122,32 +122,39 @@
         $dir = 'images/';
         $files = scandir($dir);
 
+        // Remove . and .. from the file list
+        $files = array_diff($files, array('.', '..'));
+
+        // Sort the files by creation time, newest first
+        usort($files, function ($a, $b) use ($dir) {
+          return filectime($dir . $b) - filectime($dir . $a);
+        });
+
         foreach ($files as $file) {
-          if ($file == '.' || $file == '..')
-            continue;
           $info = pathinfo($file);
-          if ($info['extension'] != 'png' && $info['extension'] != 'jpg')
+          if ($info['extension'] != 'png' && $info['extension'] != 'jpg') {
             continue;
+          }
           $title = basename($file, '.' . $info['extension']); // get file name without extension
           echo '
-          <div class="grid-item item animate-box" data-animate-effect="fadeIn">
-            <a href="single.html?img=' . urlencode($dir . $file) . '">
-              <div class="img-wrap">
-                <img src="' . $dir . $file . '" alt="" class="img-responsive">
-              </div>
-              <div class="text-wrap">
-                <div class="text-inner">
-                  <div>
-                    <h2>' . $title . '</h2>
+              <div class="grid-item item animate-box" data-animate-effect="fadeIn">
+                <a href="single.html?img=' . urlencode($dir . $file) . '">
+                  <div class="img-wrap">
+                    <img src="' . $dir . $file . '" alt="" class="img-responsive">
                   </div>
-                </div>
+                  <div class="text-wrap">
+                    <div class="text-inner">
+                      <div>
+                        <h2>' . $title . '</h2>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-          ';
-
+              ';
         }
         ?>
+
 
       </div>
 
